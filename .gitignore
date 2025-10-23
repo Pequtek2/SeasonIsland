@@ -1,3 +1,22 @@
-# Godot 4+ specific ignores
-.godot/
-/android/
+# Godot
+.import/
+export.cfg
+export_presets.cfg
+
+# System
+.DS_Store
+Thumbs.db
+
+# Buildy
+builds/
+*.exe
+*.pck
+
+# Backupy i cache
+*.tmp
+*.log
+*.bak
+
+# VSCode / Rider / inne IDE
+.vscode/
+.idea/
