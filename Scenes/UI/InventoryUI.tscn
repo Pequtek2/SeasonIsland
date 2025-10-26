@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlc5nj5ntmhp0"]
+
+[ext_resource type="Script" uid="uid://2cuhxcsn8aem" path="res://Scripts/UI/InventoryUI.cs" id="1_03hdg"]
+
+[node name="InventoryUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_03hdg")
+HotbarGridPath = NodePath("Margin/VBox/Hotbar Grid")
+BackpackGridPath = NodePath("Margin/VBox/Backpack Grid")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+
+[node name="Hotbar Grid" type="GridContainer" parent="Margin/VBox"]
+layout_mode = 2
+columns = 6
+
+[node name="Backpack Grid" type="GridContainer" parent="Margin/VBox"]
+layout_mode = 2
+columns = 6

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://krciemfhacpe"]
+
+[ext_resource type="Script" uid="uid://d1ff273y8lfr8" path="res://Scripts/UI/SlotUI.cs" id="1_8bgxp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y84hc"]
+
+[node name="Slot" type="Button"]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 32.0
+offset_bottom = 32.0
+flat = true
+script = ExtResource("1_8bgxp")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+pivot_offset = Vector2(-4, -4)
+label_settings = SubResource("LabelSettings_y84hc")
+horizontal_alignment = 2
+vertical_alignment = 2

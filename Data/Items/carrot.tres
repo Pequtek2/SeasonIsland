@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bjivl85myblg6"]
+
+[ext_resource type="Texture2D" uid="uid://bxv16xv1gaad" path="res://Art/icons/carrot.png" id="1_5gyhe"]
+[ext_resource type="Script" uid="uid://42u7ftvg3ph5" path="res://Scripts/Inventory/ItemData.cs" id="1_gsepa"]
+
+[resource]
+script = ExtResource("1_gsepa")
+Id = "caroot"
+DisplayName = "Marchew"
+Icon = ExtResource("1_5gyhe")
+metadata/_custom_type_script = "uid://42u7ftvg3ph5"

@@ -1,0 +1,12 @@
+res://Scenes/UI/Slot.tscn
+res://Scenes/UI/InventoryUI.tscn
+res://Scenes/Core/Game.tscn
+res://Data/Items/carrot.tres
+res://Scripts/Inventory/Inventory.cs
+res://Scripts/UI/SlotUI.cs
+res://Scripts/Gameplay/Chest.cs
+res://Scripts/Inventory/ItemStack.cs
+res://Scripts/UI/ChestUI.cs
+res://Scripts/UI/InventoryUI.cs
+res://Scripts/Core/Player.cs
+res://Scripts/Inventory/ItemData.cs
