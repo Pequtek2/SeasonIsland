@@ -1,6 +1,64 @@
-[gd_scene load_steps=3 format=3 uid="uid://krciemfhacpe"]
+[gd_scene load_steps=7 format=3 uid="uid://krciemfhacpe"]
 
 [ext_resource type="Script" uid="uid://d1ff273y8lfr8" path="res://Scripts/UI/SlotUI.cs" id="1_8bgxp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bgxp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.16470589, 0.18039216, 0.21176471, 0.4627451)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.33333334, 0.3764706, 0.43529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y84hc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.75686276)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqfcg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.20392157, 0.22745098, 0.26666668, 0.8745098)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vwinf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.882858, 0.8093831, 0.31932598, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_y84hc"]
 
@@ -8,13 +66,17 @@
 custom_minimum_size = Vector2(32, 32)
 offset_right = 32.0
 offset_bottom = 32.0
-flat = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_8bgxp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y84hc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iqfcg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vwinf")
 script = ExtResource("1_8bgxp")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
+pivot_offset = Vector2(4, 4)
 stretch_mode = 5
 
 [node name="Count" type="Label" parent="."]

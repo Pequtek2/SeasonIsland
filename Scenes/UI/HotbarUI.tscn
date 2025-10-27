@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfsy2jvcmi7c1"]
+
+[ext_resource type="Script" uid="uid://cgu0tit77bndf" path="res://Scenes/UI/HotbarUI.cs" id="1_bklng"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bklng"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+
+[node name="HotbarUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bklng")
+HotbarGridPath = NodePath("VBottom/HBoxContainer/Panel/GridContainer")
+
+[node name="VBottom" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBottom"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Panel" type="PanelContainer" parent="VBottom/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bklng")
+
+[node name="GridContainer" type="GridContainer" parent="VBottom/HBoxContainer/Panel"]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 6

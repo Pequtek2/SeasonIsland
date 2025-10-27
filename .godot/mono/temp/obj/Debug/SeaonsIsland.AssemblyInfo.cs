@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SeaonsIsland")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4eb25df847aa64c73260b72e96b3565117fef2d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+529522a13c977fd1d6a8196548a7ed9c7b4bb369")]
 [assembly: System.Reflection.AssemblyProductAttribute("SeaonsIsland")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SeaonsIsland")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

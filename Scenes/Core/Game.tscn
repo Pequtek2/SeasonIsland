@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bwa2qx7y4ccw3"]
+[gd_scene load_steps=23 format=3 uid="uid://bwa2qx7y4ccw3"]
 
 [ext_resource type="Texture2D" uid="uid://cxi0bcw6hf0c4" path="res://Art/tiles/background-test-1.jpg" id="1_pm1al"]
 [ext_resource type="Script" uid="uid://dedywreokhh2q" path="res://Scripts/Core/Player.cs" id="2_5yifb"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://ct6a6bg0ucyrj" path="res://Art/sprites/Player-walk-up-2.png" id="15_t2afj"]
 [ext_resource type="Script" uid="uid://bsd20w1hgcj8t" path="res://Scripts/Inventory/Inventory.cs" id="16_utlmn"]
 [ext_resource type="PackedScene" uid="uid://dlc5nj5ntmhp0" path="res://Scenes/UI/InventoryUI.tscn" id="17_6wsq5"]
+[ext_resource type="PackedScene" uid="uid://dfsy2jvcmi7c1" path="res://Scenes/UI/HotbarUI.tscn" id="18_nhasb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_en3ya"]
 texture = ExtResource("1_pm1al")
@@ -12984,8 +12985,6 @@ polygon = PackedVector2Array(959, 58, 819, 58, 818, 232, 54, 234, 60, 843, 959, 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("2_5yifb")
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 16)
 scale = Vector2(1.6, 1.6)
@@ -13002,7 +13001,14 @@ animation = &"idle_left"
 [node name="Inventory" type="Node" parent="Player"]
 script = ExtResource("16_utlmn")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 
-[node name="InventoryUi" parent="Player/CanvasGroup" instance=ExtResource("17_6wsq5")]
+[node name="CanvasGroup2" type="CanvasGroup" parent="Player"]
+
+[node name="HotbarUi" parent="Player/CanvasGroup2" instance=ExtResource("18_nhasb")]
+offset_top = 112.0
+offset_bottom = 112.0
+PlayerInventoryPath = NodePath("../../Inventory")
+
+[node name="InventoryUi" parent="Player/CanvasGroup2" instance=ExtResource("17_6wsq5")]
 PlayerInventoryPath = NodePath("../../Inventory")
